@@ -120,3 +120,12 @@ C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\ExerciseTracker\bin\Deb
 C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\ExerciseTracker\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\ExerciseTracker\obj\Debug\net8.0\ExerciseTracker.csproj.AssemblyReference.cache
 C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\ExerciseTracker\obj\Debug\net8.0\Exercise.B10B7634.Up2Date
+C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\obj\Debug\net8.0\ExerciseTracker.csproj.AssemblyReference.cache
+C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\obj\Debug\net8.0\ExerciseTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\obj\Debug\net8.0\ExerciseTracker.AssemblyInfoInputs.cache
+C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\obj\Debug\net8.0\ExerciseTracker.AssemblyInfo.cs
+C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\obj\Debug\net8.0\ExerciseTracker.csproj.CoreCompileInputs.cache
+C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\obj\Debug\net8.0\ExerciseTracker.sourcelink.json
+C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\obj\Debug\net8.0\ExerciseTracker.dll
+C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\obj\Debug\net8.0\refint\ExerciseTracker.dll
+C:\Users\iandz\OneDrive\Desktop\Projects\ExerciseTracker\obj\Debug\net8.0\ExerciseTracker.pdb
