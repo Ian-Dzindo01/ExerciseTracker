@@ -1,11 +1,15 @@
-namespace ExerciseTracker;
+using System;
+using System.ComponentModel.DataAnnotations;
 
-public class Exercise
+namespace ExerciseTracker
 {
-    public int Id;
-    public DateTime DateStart;
-    public DateTime DateEnd;
-    public TimeSpan duration;
-    public string? comments;
-
+    public class Exercise
+    {
+        [Key]
+        public int Id { get; set; }
+        public DateTime DateStart { get; set; }
+        public DateTime DateEnd { get; set; }
+        public TimeSpan Duration { get; set; }
+        public string Comments { get; set; }
+    }
 }
