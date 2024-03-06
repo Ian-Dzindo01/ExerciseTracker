@@ -1,17 +1,13 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace ExerciseTracker;
+namespace ExerciseTracker.UgniusFalze.Models;
 
-public class ExerciseDbContext : DbContext
+public class ExerciseDbContext:DbContext
 {
-    public DbSet<Pushup> Pushups { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public ExerciseDbContext(DbContextOptions<ExerciseDbContext> options)
+        : base(options)
     {
-        // Configure SQLite database
-        optionsBuilder.UseSqlite("Data Source=exercise.db");
-    }
 
-//     protected override void OnModelCreating(ModelBuilder modelBuilder)
-//     {}
+    }
+    public DbSet<Pushup> Pushups { get; set; }
 }

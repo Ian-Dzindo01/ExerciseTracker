@@ -16,7 +16,7 @@ public class ExerciseRepository(ExerciseDbContext pushUpContext) : IExerciseRepo
             pushUpContext.SaveChanges();
         }
         catch(DbUpdateException)
-        {
+        {   
             return false;
         }
 

@@ -1,9 +1,22 @@
-﻿namespace ExerciseTracker;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        InputHelper.GetUserInput();
-    }
-}
+namespace ExerciseTracker;
+
+var builder = Host.CreateApplicationBuilder(args);
+
+builder.Services
+    .AddDbContext<PullUpContext>(opt =>
+        opt.UseSqlite("Data Source=exercise.db"));
+    .AddScoped<IExerciseService, ExerciseService>()
+    .AddScoped<IExerciseRepository, ExerciseRepository>()
+    .AddTransient<ExerciseController>();
+    
+builder.Logging.AddFilter("Microsoft.EntityFrameworkCore", LogLevel.Warning);
+var app = builder.Build();
+
+using var scope = app.Services.CreateScope();
+var controller = scope.ServiceProvider.GetRequiredService<ExerciseController>();
+var menu = new Menu(controller);
+menu.Start();
