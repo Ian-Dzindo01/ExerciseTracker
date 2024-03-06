@@ -4,7 +4,7 @@ namespace ExerciseTracker;
 
 public class ExerciseDbContext : DbContext
 {
-    public DbSet<Exercise> Exercises { get; set; }
+    public DbSet<Pushup> Pushups { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -13,7 +13,5 @@ public class ExerciseDbContext : DbContext
     }
 
 //     protected override void OnModelCreating(ModelBuilder modelBuilder)
-//     {
-//         // Configure the model, relationships, etc., if needed
-//     }
+//     {}
 }
