@@ -2,7 +2,6 @@ namespace ExerciseTracker;
 
 class InputHelper
 {   
-    static ExerciseController controller = new();
     static public void GetUserInput()
     {
         Console.WriteLine("------------------------------------");
@@ -16,7 +15,7 @@ class InputHelper
         switch (choice)
         {
             case "1":
-                Controller.Create();
+                // Controller.Create();
                 break;
             case "2":
                 // Controller.Show();
