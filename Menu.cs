@@ -27,7 +27,7 @@ namespace ExerciseTracker
                     AddExercise(exerciseController);
                     break;
                 case "2":
-                    // exerciseController.Show();
+                    // ShowExercise(exerciseController);
                     break;
                 case "3":
                     // Console.WriteLine("Id of contact you would like to update: ");
@@ -35,9 +35,7 @@ namespace ExerciseTracker
                     // Controller.Update(id1);
                     break;
                 case "4":
-                    // Console.WriteLine("Id of contact you would like to delete: ");
-                    // int id2 = int.Parse(Console.ReadLine());
-                    // Controller.Delete(id2);
+                    DeleteExercise(exerciseController);
                     break;
                 default:
                     Console.WriteLine("\nInvalid Command. Please type a number from 0 to 4.\n");
@@ -58,7 +56,15 @@ namespace ExerciseTracker
             else
             {
                 Console.WriteLine("Failed to add new exercise. Please check the input and try again.");
+                AddExercise(exerciseController);
             }
-        }   
+        }
+
+        private static void DeleteExercise(ExerciseController exerciseController)
+        {
+            Console.WriteLine("Id of contact you would like to delete: ");
+            int id = int.Parse(Console.ReadLine());
+            exerciseController.DeleteExercise(id);
+        }
     }
 }
