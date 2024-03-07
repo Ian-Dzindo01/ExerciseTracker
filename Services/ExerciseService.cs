@@ -4,7 +4,7 @@ public class ExerciseService(IExerciseRepository exerciseRepository) : IExercise
 {
     private readonly IExerciseRepository ExerciseRepository = exerciseRepository;
     
-    public List<Pushup> GetExercises()
+    public List<Exercise> GetExercises()
     {
         return ExerciseRepository.GetExercises();
     }
@@ -14,14 +14,14 @@ public class ExerciseService(IExerciseRepository exerciseRepository) : IExercise
         return ExerciseRepository.DeleteExercise(id);
     }
 
-    public bool UpdateExercise(Pushup pushup)
+    public bool UpdateExercise(Exercise exercise)
     {
-        return ExerciseRepository.UpdateExercise(pushup);
+        return ExerciseRepository.UpdateExercise(exercise);
     }
 
-    public bool AddExercise(Pushup pushup)
+    public bool AddExercise(Exercise exercise)
     {
-        return ExerciseRepository.InsertExercise(pushup);
+        return ExerciseRepository.InsertExercise(exercise);
     }
     
 }

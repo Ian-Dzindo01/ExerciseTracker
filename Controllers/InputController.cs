@@ -1,38 +1,40 @@
-namespace ExerciseTracker;
+namespace ExerciseTracker
+{
 
-class InputHelper
-{   
-    static public void GetUserInput()
+    public class InputHelper
     {
-        Console.WriteLine("------------------------------------");
-        Console.WriteLine("1: Create a New Entry");
-        Console.WriteLine("2: View a Session");
-        Console.WriteLine("3: Update Session Data");
-        Console.WriteLine("4: Delete a Session");
-
-        string? choice = Console.ReadLine();
-
-        switch (choice)
+        public static T GetInput<T>(string prompt)
         {
-            case "1":
-                // Controller.Create();
-                break;
-            case "2":
-                // Controller.Show();
-                break;
-            case "3":
-                // Console.WriteLine("Id of contact you would like to update: ");
-                // int id1 = int.Parse(Console.ReadLine());
-                // Controller.Update(id1);
-                break;
-            case "4":
-                // Console.WriteLine("Id of contact you would like to delete: ");
-                // int id2 = int.Parse(Console.ReadLine());
-                // Controller.Delete(id2);
-                break;
-            default:
-                Console.WriteLine("\nInvalid Command. Please type a number from 0 to 4.\n");
-                break;
+            Console.Write($"{prompt}: ");
+            string input = Console.ReadLine();
+
+            try
+            {
+                // Convert the input to the specified type
+                return (T)Convert.ChangeType(input, typeof(T));
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine($"Invalid input. Please enter a valid {typeof(T).Name}.");
+                return GetInput<T>(prompt);
+            }
+        }
+
+        public static Exercise GetExerciseInput()
+        {
+            var input = new Exercise();
+
+            input.Name = GetInput<string>("Enter name of exercise");
+
+            input.DateStart = GetInput<DateTime>("Enter start date");
+
+            input.DateEnd = GetInput<DateTime>("Enter end date");
+            
+            input.Repetitions = GetInput<int>("Enter number of repetitions");
+
+            input.Comment = GetInput<string>("Enter optional comment (press Enter to skip)");
+
+            return input;
         }
     }
 }

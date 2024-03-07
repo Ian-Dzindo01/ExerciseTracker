@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore;
 namespace ExerciseTracker;
 public class ExerciseRepository(ExerciseDbContext pushUpContext) : IExerciseRepository
 {
-    public List<Pushup> GetExercises()
+    public List<Exercise> GetExercises()
     {
-        return pushUpContext.Pushups.ToList();
+        return pushUpContext.Exercises.ToList();
     }
 
-    public bool InsertExercise(Pushup pushup)
+    public bool InsertExercise(Exercise exercise)
     {
-        pushUpContext.Pushups.Add(pushup);
+        pushUpContext.Exercises.Add(exercise);
         try
         {
             pushUpContext.SaveChanges();
@@ -23,9 +23,9 @@ public class ExerciseRepository(ExerciseDbContext pushUpContext) : IExerciseRepo
         return true;
     }
 
-    public bool UpdateExercise(Pushup pushup)
+    public bool UpdateExercise(Exercise exercise)
     {
-        pushUpContext.Pushups.Update(pushup);
+        pushUpContext.Exercises.Update(exercise);
         try
         {
             pushUpContext.SaveChanges();
@@ -39,13 +39,13 @@ public class ExerciseRepository(ExerciseDbContext pushUpContext) : IExerciseRepo
 
     public bool DeleteExercise(int id)
     {
-        var exercise = pushUpContext.Pushups.Find(id);
+        var exercise = pushUpContext.Exercises.Find(id);
         if (exercise == null)
         {
             return false;
         }
 
-        pushUpContext.Pushups.Remove(exercise);
+        pushUpContext.Exercises.Remove(exercise);
         try
         {
             pushUpContext.SaveChanges();

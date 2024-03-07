@@ -9,5 +9,5 @@ public class ExerciseDbContext:DbContext
     {
 
     }
-    public DbSet<Pushup> Pushups { get; set; }
+    public DbSet<Exercise> Exercises { get; set; }
 }

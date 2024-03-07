@@ -2,8 +2,8 @@
 
 public interface IExerciseRepository
 {
-    public List<Pushup> GetExercises();
-    public bool InsertExercise(Pushup pushup);
-    public bool UpdateExercise(Pushup pushup);
+    public List<Exercise> GetExercises();
+    public bool InsertExercise(Exercise exercise);
+    public bool UpdateExercise(Exercise exercise);
     public bool DeleteExercise(int id);
 }

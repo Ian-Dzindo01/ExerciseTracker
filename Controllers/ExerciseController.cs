@@ -9,19 +9,19 @@ public class ExerciseController
         ExerciseService = exerciseService;
     }
 
-    public List<Pushup> GetExercises()
+    public List<Exercise> GetExercises()
     {
         return ExerciseService.GetExercises();
     }
 
-    public bool AddExercise(Pushup pushup)
+    public bool AddExercise(Exercise exercise)
     {
-        return ExerciseService.AddExercise(pushup);
+        return ExerciseService.AddExercise(exercise);
     }
 
-    public bool UpdateExercise(Pushup pushup)
+    public bool UpdateExercise(Exercise exercise)
     {
-        return ExerciseService.UpdateExercise(pushup);
+        return ExerciseService.UpdateExercise(exercise);
     }
 
     public bool DeleteExercise(int id)
