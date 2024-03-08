@@ -1059,6 +1059,19 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
+      "Spectre.Console/0.48.1-preview.0.34": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Spectre.Console.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Spectre.Console.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
         "type": "package",
         "dependencies": {
@@ -3041,6 +3054,26 @@
         "mono.texttemplating.nuspec"
       ]
     },
+    "Spectre.Console/0.48.1-preview.0.34": {
+      "sha512": "iW0uprHODYQ4i6YvKHxyfkwKjQ7SiCuscFS9x9FlJwsCX59x8pxa8zxST/bfdxGo0quPN4SdJ/R9aKVc+J7rVA==",
+      "type": "package",
+      "path": "spectre.console/0.48.1-preview.0.34",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Spectre.Console.dll",
+        "lib/net6.0/Spectre.Console.xml",
+        "lib/net7.0/Spectre.Console.dll",
+        "lib/net7.0/Spectre.Console.xml",
+        "lib/net8.0/Spectre.Console.dll",
+        "lib/net8.0/Spectre.Console.xml",
+        "lib/netstandard2.0/Spectre.Console.dll",
+        "lib/netstandard2.0/Spectre.Console.xml",
+        "small-logo.png",
+        "spectre.console.0.48.1-preview.0.34.nupkg.sha512",
+        "spectre.console.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
       "sha512": "BmAf6XWt4TqtowmiWe4/5rRot6GerAeklmOPfviOvwLoF5WwgxcJHAxZtySuyW9r9w+HLILnm8VfJFLCUJYW8A==",
       "type": "package",
@@ -3639,7 +3672,8 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.2",
       "Microsoft.Extensions.DependencyInjection >= 9.0.0-preview.1.24080.9",
       "Microsoft.Extensions.Hosting >= 9.0.0-preview.1.24080.9",
-      "Microsoft.Extensions.Logging >= 9.0.0-preview.1.24080.9"
+      "Microsoft.Extensions.Logging >= 9.0.0-preview.1.24080.9",
+      "Spectre.Console >= 0.48.1-preview.0.34"
     ]
   },
   "packageFolders": {
@@ -3709,6 +3743,10 @@
           "Microsoft.Extensions.Logging": {
             "target": "Package",
             "version": "[9.0.0-preview.1.24080.9, )"
+          },
+          "Spectre.Console": {
+            "target": "Package",
+            "version": "[0.48.1-preview.0.34, )"
           }
         },
         "imports": [

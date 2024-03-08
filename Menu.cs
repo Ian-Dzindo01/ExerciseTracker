@@ -1,4 +1,5 @@
 using System;
+using Spectre.Console;
 
 namespace ExerciseTracker
 {
@@ -15,7 +16,7 @@ namespace ExerciseTracker
         {
             Console.WriteLine("------------------------------------");
             Console.WriteLine("1: Create a New Entry");
-            Console.WriteLine("2: View a Session");
+            Console.WriteLine("2: View all Sessions");
             Console.WriteLine("3: Update Session Data");
             Console.WriteLine("4: Delete a Session");
 
@@ -27,7 +28,7 @@ namespace ExerciseTracker
                     AddExercise(exerciseController);
                     break;
                 case "2":
-                    // ShowExercise(exerciseController);
+                    ShowExercise(exerciseController);
                     break;
                 case "3":
                     // Console.WriteLine("Id of contact you would like to update: ");
@@ -62,9 +63,20 @@ namespace ExerciseTracker
 
         private static void DeleteExercise(ExerciseController exerciseController)
         {
-            Console.WriteLine("Id of contact you would like to delete: ");
+            Console.WriteLine("Id of entry you would like to delete: ");
             int id = int.Parse(Console.ReadLine());
             exerciseController.DeleteExercise(id);
+        }
+
+        private static void ShowExercise(ExerciseController exerciseController)
+        {
+            List<Exercise> exercises = exerciseController.GetExercises();
+            foreach (var w in exercises)
+            {
+                Console.WriteLine(@$"Id: {w.Id} Name: {w.Name} Start Time: {w.DateStart} End Time: {w.DateEnd} 
+                                    Repetitions: {w.Repetitions} Duration: {w.Duration}");
+            }
+            Console.WriteLine("-------------------------------------------\n");
         }
     }
 }

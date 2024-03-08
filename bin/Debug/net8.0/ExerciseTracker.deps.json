@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.2",
           "Microsoft.Extensions.DependencyInjection": "9.0.0-preview.1.24080.9",
           "Microsoft.Extensions.Hosting": "9.0.0-preview.1.24080.9",
-          "Microsoft.Extensions.Logging": "9.0.0-preview.1.24080.9"
+          "Microsoft.Extensions.Logging": "9.0.0-preview.1.24080.9",
+          "Spectre.Console": "0.48.1-preview.0.34"
         },
         "runtime": {
           "ExerciseTracker.dll": {}
@@ -748,6 +749,14 @@
           }
         }
       },
+      "Spectre.Console/0.48.1-preview.0.34": {
+        "runtime": {
+          "lib/net8.0/Spectre.Console.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.48.1.0"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
         "dependencies": {
           "SQLitePCLRaw.lib.e_sqlite3": "2.1.6",
@@ -1366,6 +1375,13 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "Spectre.Console/0.48.1-preview.0.34": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iW0uprHODYQ4i6YvKHxyfkwKjQ7SiCuscFS9x9FlJwsCX59x8pxa8zxST/bfdxGo0quPN4SdJ/R9aKVc+J7rVA==",
+      "path": "spectre.console/0.48.1-preview.0.34",
+      "hashPath": "spectre.console.0.48.1-preview.0.34.nupkg.sha512"
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.6": {
       "type": "package",
