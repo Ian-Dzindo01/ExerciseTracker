@@ -14,7 +14,7 @@ namespace ExerciseTracker
 
         public void Start()
         {
-            Console.WriteLine("------------------------------------");
+            Console.WriteLine(new string('-', 50));
             Console.WriteLine("1: Create a New Entry");
             Console.WriteLine("2: View all Sessions");
             Console.WriteLine("3: Update Session Data");
@@ -31,9 +31,6 @@ namespace ExerciseTracker
                     ShowExercise(exerciseController);
                     break;
                 case "3":
-                    // Console.WriteLine("Id of contact you would like to update: ");
-                    // int id1 = int.Parse(Console.ReadLine());
-                    // Controller.Update(id1);
                     break;
                 case "4":
                     DeleteExercise(exerciseController);
@@ -59,6 +56,10 @@ namespace ExerciseTracker
                 Console.WriteLine("Failed to add new exercise. Please check the input and try again.");
                 AddExercise(exerciseController);
             }
+
+            // May not be the best approach. CHANGE.
+            Menu menu = new Menu(exerciseController);
+            menu.Start();        
         }
 
         private static void DeleteExercise(ExerciseController exerciseController)
@@ -66,7 +67,10 @@ namespace ExerciseTracker
             Console.WriteLine("Id of entry you would like to delete: ");
             int id = int.Parse(Console.ReadLine());
             exerciseController.DeleteExercise(id);
-        }
+
+            // May not be the best approach. CHANGE.
+            Menu menu = new Menu(exerciseController);
+            menu.Start();        }
 
         private static void ShowExercise(ExerciseController exerciseController)
         {
@@ -76,7 +80,10 @@ namespace ExerciseTracker
                 Console.WriteLine(@$"Id: {w.Id} Name: {w.Name} Start Time: {w.DateStart} End Time: {w.DateEnd} 
                                     Repetitions: {w.Repetitions} Duration: {w.Duration}");
             }
-            Console.WriteLine("-------------------------------------------\n");
+
+            // May not be the best approach. CHANGE.
+            Menu menu = new Menu(exerciseController);
+            menu.Start();
         }
     }
 }

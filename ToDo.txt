@@ -1,1 +1,8 @@
 - Make it async.
+
+- Add Validation
+
+- To illustrate the separation provided by the repository pattern, create a different branch of your project where 
+    you'll replace Entity Framework by Dapper or ADO.NET in your repository. You'll notice that you won't need to touch your controller.
+
+- Create an application with two types of exercises (ex. weights and cardio), using EF for one and Raw SQL for the other.

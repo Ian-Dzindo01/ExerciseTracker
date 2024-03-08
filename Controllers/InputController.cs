@@ -26,15 +26,31 @@ namespace ExerciseTracker
 
             input.Name = GetInput<string>("Enter name of exercise");
 
-            input.DateStart = GetInput<DateTime>("Enter start date");
+            while(true)
+            {
+                input.DateStart = GetInput<DateTime>("Enter start date");
+                input.DateEnd = GetInput<DateTime>("Enter end date");
 
-            input.DateEnd = GetInput<DateTime>("Enter end date");
+                if (CheckDates(input.DateStart, input.DateEnd))
+                    break;
+            }
             
             input.Repetitions = GetInput<int>("Enter number of repetitions");
 
             input.Comment = GetInput<string>("Enter optional comment (press Enter to skip)");
 
             return input;
+        }
+
+        private static bool CheckDates(DateTime start, DateTime end)
+        {
+            if (start > end )
+            {
+                Console.WriteLine("Start date is greater than end date. Please try again.");
+                return false;
+            }
+            else
+                return true;
         }
     }
 }
